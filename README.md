@@ -1,4 +1,9 @@
 
+# Autômato finito determinístico em Python 🐍
+
+Simulador de autômato finito determinístico construído em Python para a cadeira de Linguagens formais e autômatos da Universidade La Salle.
+
+
 ## Rodando localmente
 
 Clone o projeto
