@@ -45,4 +45,6 @@ O número acima da seta é o valor lido pela fita, o estado à esquerda é o est
 s0 ---> (aqui você colocará o estado que irá quando estiver em s0 e a fita ler 0)
 ```
 
-No final, o programa solicitará uma palavra para ser validada no autônomo. Se for válida, printará "Palavra aceita pelo autônomo". Caso contrário, printará "Palavra rejeitada pelo autônomo".
+No final, o programa solicitará uma palavra para ser validada no autônomo. 
+
+Se for válida, printará "Palavra aceita pelo autônomo". Caso contrário, printará "Palavra rejeitada pelo autônomo".
