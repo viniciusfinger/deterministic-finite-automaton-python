@@ -23,7 +23,7 @@ def validate_final_states(final_states):
         print("Autômato inválido, nenhum estado final definido.")
         exit()
 
-def validate_valid_state(states, state_id):
+def validate_state(states, state_id):
     for state in states:
         if state_id == state.id:
             return True
@@ -36,7 +36,7 @@ start_state = ""
 initial_state = ""
 transitions = {}
 
-print("Simulador de automato finito nao-deterministico.")
+print("Simulador de autômato finito não-determinístico.")
 
 print("Insira os estados do autômato separados por espaço: ", end="")
 raw_states_id = input().split()
@@ -48,13 +48,13 @@ alphabet = input().split()
 
 print("Insira o estado inicial do autômato: ", end="")
 initial_state_id = input()
-validate_valid_state(states, initial_state_id)
+validate_state(states, initial_state_id)
 
 
 print("Insira os estados finais do autômato separados por espaço: ", end="")
 final_states_id = input().split()
 for final_state_id in final_states_id:
-    validate_valid_state(states, final_state_id)
+    validate_state(states, final_state_id)
 
 for state in states:
     if state.id == initial_state_id:
@@ -74,6 +74,7 @@ for state in states:
         print(f"\t  {character}")
         print(f"{state.id}\t---->\t", end="")
         destination_state_id = input()
+        validate_state(states, destination_state_id)
         
         if destination_state_id == ".":
             transitions[(state, character)] = None
