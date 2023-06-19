@@ -31,6 +31,21 @@ def validate_state(states, state_id):
     print("Estado inválido, não foi informado na etapa de inserir os estados.")
     exit()
 
+def validate_word(alphabet, input_word):
+    set_word = set(list(input_word))
+    set_alphabet = set(alphabet)
+
+    invalid_characteres = set_alphabet.symmetric_difference(set_word)
+    
+    if len(invalid_characteres) > 0:
+        print("Palavra rejeitada: contém uma ou mais letras que não existem no alfabeto: ", end="")
+        
+        for character in invalid_characteres:
+            print(character + ' ', end="")
+        
+        exit()
+
+
 states = []
 start_state = ""
 initial_state = ""
@@ -44,7 +59,7 @@ for state_id in raw_states_id:
     states.append(State(state_id))
 
 print("Digite os caracteres do alfabeto separados por espaço: ", end="")
-alphabet = input().split()
+alphabet = input().lower().split()
 
 print("Insira o estado inicial do autômato: ", end="")
 initial_state_id = input()
@@ -83,7 +98,8 @@ for state in states:
             transitions[(state.id, character)] = destination_state
             
 print("Insira uma palavra para ser validada no autônomo: ", end="")
-input_word = input()
+input_word = input().lower()
+validate_word(alphabet, input_word)
 
 current_state = initial_state
 
