@@ -1,7 +1,7 @@
 
 # Autômato finito determinístico em Python 🐍
 
-Simulador de autômato finito determinístico construído em Python para a cadeira de Linguagens formais e autômatos da Universidade La Salle.
+Simulador de autômato finito determinístico construído em Python para a cadeira de Linguagens Formais e Autômatos da Universidade La Salle.
 
 
 ## Rodando localmente
@@ -39,6 +39,7 @@ E os caracteres do alfabeto nesse padrão, de acordo com o que desejar:
 ```
 
 Quando solicitado para completar a sentença com o próximo estado, deverá inserir próximo estado para aquele valor ou um ponto (.) quando não houver próximo estado.
+
 O número acima da seta é o valor lido pela fita, o estado à esquerda é o estado atual e o estado à direita (que você deve preencher) é para onde irá.
 ```bash
     0
