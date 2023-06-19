@@ -36,6 +36,8 @@ start_state = ""
 initial_state = ""
 transitions = {}
 
+print("Simulador de automato finito nao-deterministico.")
+
 print("Insira os estados do autômato separados por espaço: ", end="")
 raw_states_id = input().split()
 for state_id in raw_states_id:
