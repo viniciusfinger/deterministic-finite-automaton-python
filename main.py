@@ -1,15 +1,39 @@
 from state import State
 
 
-def getDestinationState(destination_state_id, states):
+def get_destination_state(destination_state_id, states):
     for state in states:
         if state.id == destination_state_id:
             return state
 
+def validate_initial_state(initial_state):
+    if initial_state == "":
+        print("Autômato inválido, nenhum estado inicial definido.")
+        exit()
+
+def validate_final_states(final_states):
+    have_final_state = False
+
+    for state in final_states:
+        if state.is_final == True:
+            have_final_state = True
+            break
+
+    if have_final_state == False:
+        print("Autômato inválido, nenhum estado final definido.")
+        exit()
+
+def validate_valid_state(states, state_id):
+    for state in states:
+        if state_id == state.id:
+            return True
+
+    print("Estado inválido, não foi informado na etapa de inserir os estados.")
+    exit()
+
 states = []
 start_state = ""
 initial_state = ""
-final_states = []
 transitions = {}
 
 print("Insira os estados do autômato separados por espaço: ", end="")
@@ -22,9 +46,13 @@ alphabet = input().split()
 
 print("Insira o estado inicial do autômato: ", end="")
 initial_state_id = input()
+validate_valid_state(states, initial_state_id)
+
 
 print("Insira os estados finais do autômato separados por espaço: ", end="")
 final_states_id = input().split()
+for final_state_id in final_states_id:
+    validate_valid_state(states, final_state_id)
 
 for state in states:
     if state.id == initial_state_id:
@@ -33,15 +61,9 @@ for state in states:
     
     if state.id in final_states_id:
         state.is_final = True
-        final_states.append(state)
-        
-if initial_state == "":
-    print("Autômato inválido, nenhum estado inicial definido.")
-    exit()
 
-if len(final_states) <= 0:
-    print("Autômato inválido, nenhum estado final definido.")
-    exit()
+validate_initial_state(initial_state)
+validate_final_states(states)
 
 print("Complete a sentença com o próximo estado de acordo com o caracter (digite um . se não houver transição.)")
 
@@ -54,10 +76,10 @@ for state in states:
         if destination_state_id == ".":
             transitions[(state, character)] = None
         else:
-            destination_state = getDestinationState(destination_state_id, states)
+            destination_state = get_destination_state(destination_state_id, states)
             transitions[(state.id, character)] = destination_state
             
-print("Insira uma palavra para ser validade no autônomo: ", end="")
+print("Insira uma palavra para ser validada no autônomo: ", end="")
 input_word = input()
 
 current_state = initial_state
