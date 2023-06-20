@@ -51,7 +51,7 @@ Quando solicitado para completar a sentença com o próximo estado, deverá inse
 O número acima da seta é o valor lido pela fita, o estado à esquerda é o estado atual e o estado à direita (que você deve preencher) é para onde irá.
 ```bash
     0
-s0 ---> (aqui você colocará o estado que irá quando estiver em s0 e a fita ler 0, ou ponto (.) caso não haja transição)
+s0 ---> (coloque o estado que irá quando estiver em s0 e a fita ler 0, ou ponto (.) caso não haja transição)
 ```
 
 No final, o programa solicitará uma palavra para ser validada no autômato. 
