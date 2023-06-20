@@ -1,5 +1,5 @@
 
-# Autômato finito determinístico em Python 🐍
+# Autômato Finito Determinístico em Python 🐍
 
 Simulador de autômato finito determinístico construído em Python para a cadeira de Linguagens Formais e Autômatos da Universidade La Salle.
 
@@ -23,6 +23,14 @@ Rode o arquivo principal
 ```bash
   python3 main.py
 ```
+## Alternativamente...
+
+Acesse o link abaixo e clique em "Run"
+
+```bash
+  https://replit.com/@FelipeRonzani/AFD-Linguagens-Formais-e-Automatos
+```
+## Instruções de uso:
 
 A partir de agora é só preencher as informações solicitadas pelo console
 
