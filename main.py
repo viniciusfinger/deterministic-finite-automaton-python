@@ -66,7 +66,7 @@ initial_state_id = input()
 validate_state(states, initial_state_id)
 
 
-print("Insira os estados finais do autômato separados por espaço: ", end="")
+print("Insira o(s) estado(s) final(is) do autômato separado(s) por espaço: ", end="")
 final_states_id = input().split()
 for final_state_id in final_states_id:
     validate_state(states, final_state_id)
@@ -97,7 +97,7 @@ for state in states:
             destination_state = get_destination_state(destination_state_id, states)
             transitions[(state.id, character)] = destination_state
             
-print("Insira uma palavra para ser validada no autônomo: ", end="")
+print("Insira uma palavra para ser validada no autômato: ", end="")
 input_word = input().lower()
 validate_word(alphabet, input_word)
 
@@ -107,10 +107,10 @@ for character in input_word:
     current_state = transitions[(current_state.id, character)]
     
     if current_state is None:
-        print("Palavra rejeitada pelo autônomo.")
+        print("Palavra rejeitada pelo autômato.")
         break
     
 if (current_state.is_final):
-    print("Palavra aceita pelo autônomo.")
+    print("Palavra aceita pelo autômato.")
 else:
-    print("Palavra rejeitada pelo autônomo.")
+    print("Palavra rejeitada pelo autômato.")
