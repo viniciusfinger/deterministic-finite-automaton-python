@@ -25,7 +25,7 @@ def validate_final_states(final_states):
 
 def validate_state(states, state_id):
     for state in states:
-        if state_id == state.id:
+        if state_id == state.id or state_id == ".":
             return True
 
     print("Estado inválido, não foi informado na etapa de inserir os estados.")
