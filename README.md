@@ -23,7 +23,7 @@ Rode o arquivo principal
 ```bash
   python3 main.py
 ```
-## Alternativamente...
+## Outra forma de rodar o código no navegador:
 
 Acesse o link abaixo e clique em "Run"
 
