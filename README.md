@@ -1,7 +1,7 @@
 
 # Deterministic Finite Automaton in Python 🐍
 
-Deterministic finite automaton simulator built in Python for the Formal Languages and Automata course at La Salle University.
+Deterministic finite automaton simulator built in Python for the Formal Languages and Automaton course at La Salle University.
 
 
 ## Running locally:
