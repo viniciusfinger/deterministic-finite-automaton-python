@@ -1,59 +1,59 @@
 
-# Autômato Finito Determinístico em Python 🐍
+# Deterministic Finite Automaton in Python 🐍
 
-Simulador de autômato finito determinístico construído em Python para a cadeira de Linguagens Formais e Autômatos da Universidade La Salle.
+Deterministic finite automaton simulator built in Python for the Formal Languages and Automata course at La Salle University.
 
 
-## Rodando localmente
+## Running locally:
 
-Clone o projeto
+Clone the project:
 
 ```bash
   git clone git@github.com:viniciusfinger/afd-python.git
 ```
 
-Entre no diretório do projeto
+Access the project folder:
 
 ```bash
   cd afd-python
 ```
 
-Rode o arquivo principal
+Run the main file:
 
 ```bash
   python3 main.py
 ```
-## Outra forma de rodar o código, no navegador:
+## Running on browser:
 
-Acesse o link abaixo e clique em "Run"
+Access the link bellow and click "Run":
 
-```bash
-  https://replit.com/@FelipeRonzani/AFD-Linguagens-Formais-e-Automatos
-```
-## Instruções de uso:
+https://replit.com/@FelipeRonzani/AFD-Linguagens-Formais-e-Automatos
 
-A partir de agora é só preencher as informações solicitadas pelo console.
+## How to use:
 
-Você deverá inserir os estados do autômato nesse padrão, de acordo com a quantidade de estados que necessitar:
+After running, just fill in the information requested by the console
+
+You must insert the automaton states into this pattern, according to the number of states you need, following the pattern s{number of state}:
 
 ```bash
   s0 s1 s2 s3
 ```
 
-E os caracteres do alfabeto nesse padrão, de acordo com o que desejar:
+Then, insert the alphabet characters into this pattern, however you want:
 
 ```bash
   a b c d
 ```
 
-Quando solicitado para completar a sentença com o próximo estado, deverá inserir próximo estado para aquele valor ou um ponto (.) quando não houver próximo estado.
+When asked to complete the sentence with the next state, you must enter next state for that value or a period (.) when there is no next state.
 
-O número acima da seta é o valor lido pela fita, o estado à esquerda é o estado atual e o estado à direita (que você deve preencher) é para onde irá.
+The number above the arrow is the value read by the tape, the state on the left is the current state and the state on the right (which you must fill in) is where it will go.
+
 ```bash
     0
 s0 ---> (coloque o estado que irá quando estiver em s0 e a fita ler 0, ou ponto (.) caso não haja transição)
 ```
 
-No final, o programa solicitará uma palavra para ser validada no autômato. 
+At the end, the program will request a word to be validated in the automaton.
 
 Se for válida, printará "Palavra aceita pelo autômato". Caso contrário, printará "Palavra rejeitada pelo autômato".
